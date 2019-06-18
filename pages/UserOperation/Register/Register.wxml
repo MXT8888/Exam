@@ -1,0 +1,44 @@
+<!--  定义一个容器  -->
+<view class='main'>
+  <!--笑脸图片  -->
+  <view class='smile'>
+    <image src='{{smileUrl}}'></image>
+  </view>
+  <!-- 文本数据一if -->
+  <view class='text1'  wx:if='{{photoStatus}}'>
+    <text>添加人脸数据</text>
+  </view>
+  <!-- 文本数据一else -->
+  <view class='text1' wx:else>
+    <text>人脸录入成功</text>
+  </view>
+ <!-- 文本数据二if -->
+  <view class='text2' wx:if='{{photoStatus}}'>
+    <text>请保持脸部在明亮光线条件下，并正面面对手机</text>
+  </view>
+    <!-- 文本数据二else -->
+  <view class='text2' wx:else>
+    <text>你现在可以使用人脸检测进行登录考试</text>
+  </view>
+  <!--内容部分处  -->
+  <view class='circular'>
+  <!-- 相机在此 -->
+    <camera device-position="front" flash="off" binderror="error" style="margin-left: 50rpx;width: 400rpx; height: 400rpx;border-radius: 50%;" wx:if='{{photoStatus}}'></camera>
+    <image src='{{canback}}' mode='widthFix' wx:else></image>
+  </view>
+  <!--拍照处----if  -->
+  <view class='camera' wx:if='{{photoStatus}}'>
+    <image src='{{camera}}' bindtap='camera'></image>
+  </view>
+  <!--拍照处----else -->
+  <view class='camera' wx:else>
+    <!-- 重拍 -->
+    <button class='okbut' bindtap='nologo'>
+      <text>重拍</text>
+    </button>
+    <!-- 确定 -->
+    <button class='okbut' bindtap='oklogo'>
+      <text>确认</text>
+    </button>
+  </view>
+</view>

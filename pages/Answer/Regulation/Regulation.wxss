@@ -1,0 +1,15 @@
+/* 文本一 */
+.text{
+  color: gray;
+  font-size: 40rpx;
+}
+/* 文本二 */
+.text2{
+  color: rgb(0, 0, 0);
+  font-size: 30rpx;
+}
+/* 所有view的属性设置 */
+view{
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}

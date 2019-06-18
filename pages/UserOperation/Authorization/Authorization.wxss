@@ -1,0 +1,44 @@
+/* 定义一个容器 */
+.container{
+  width: 100%rpx;
+  height: 1250rpx;
+  background-color:	#FFFFFF;
+}
+/* 用户信息和按钮的布局方式 */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 用户头像设置 */
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+ border-radius: 100rpx;
+ overflow:hidden;
+ margin: 20rpx;
+}
+/* 用户昵称属性设置 */
+.userinfo-nickname {
+  color: #aaa;
+}
+/* 注册和登陆按钮背景色 */
+.loginregister{
+  background-color: rgba(253, 253, 253, 0.404);
+}
+/*注册和登陆按钮距离顶端距离  */
+.zhucedenglu{
+  margin-top: 100rpx;
+}
+/* 授权按钮登陆 */
+.Atz_Btn{
+  margin-top: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+/* 图片的属性设置 */
+.images1{
+  margin-top: 100rpx;
+    width: 650rpx;
+    height: 400rpx;
+}

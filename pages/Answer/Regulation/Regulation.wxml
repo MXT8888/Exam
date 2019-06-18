@@ -1,0 +1,11 @@
+<!--pages/StartTitle/guize/guize.wxml-->
+<view><text class='text' >等级规则说明:</text></view>
+<view>______________________________________</view>
+<view><text class='text2' >等级一：答题小白   积分：0-29</text></view>
+<view><text class='text2'>等级二：答题书童   积分：30-50</text></view>
+<view><text class='text2'>等级三：答题秀才   积分：60-90</text></view>
+<view><text class='text2'>等级四：答题举人   积分：100-149</text></view>
+<view><text class='text2'>等级五：答题探花   积分：150-209</text></view>
+<view><text class='text2'>等级六：答题榜眼   积分：210-279</text></view>
+<view><text class='text2'>等级七：答题状元   积分：280++</text></view>
+

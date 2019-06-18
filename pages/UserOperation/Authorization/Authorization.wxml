@@ -1,0 +1,28 @@
+<!-- 定义一个容器 -->
+<view class="container" >
+    <!-- 用户的头像和昵称 -->
+    <view class="userinfo" wx:if="{{isLogin}}">
+      <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+      <open-data type="userAvatarUrl" class="userinfo-avatar" ></open-data>
+      <open-data type="userNickName" class="userinfo-nickname"></open-data>
+      <!-- 此处是图片显示 -->
+      <image src="{{imagess}}" class='images1' ></image>
+      <!-- 注册和登陆按钮 -->
+        <view class='zhucedenglu'>
+          <block wx:if="{{detectionStatus}}" >
+            <button  bindtap="login" class='loginregister' >人脸登录</button>
+          </block>
+          <block wx:else>
+              <button bindtap='register' class='loginregister' >人脸注册</button>
+          </block>
+        </view>
+    </view>
+      <!-- 需要使用 button 来授权登录 -->
+    <view class="userinfo" wx:else>
+      <!-- type="primary"  -->
+      <button plain="true" style='border:0rpx;'  size="mini" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      <image class='Atz_Btn'  src='../../images/shu.png'/>
+      </button>
+        <view wx:else>请升级微信版本</view>
+     </view>
+</view>

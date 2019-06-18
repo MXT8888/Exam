@@ -1,0 +1,103 @@
+ /* 定义一个容器  */
+.main{
+  margin: 10rpx 50rpx;
+}
+/* 头部属性设置 */
+.headimg{
+  display: flex;
+  flex-direction: column;
+}
+/* 用户头像设置 */
+.headimg .image{
+  display: flex;
+  justify-content: center;
+}
+/* 用户头像设置 */
+.headimg .image image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+/* 用户昵称属性设置 */
+.headimg .name{
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  justify-content: center;
+}
+/* 知识领域属性设置 */
+.knowledgeAndGrade{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-weight: normal;
+}
+/* 擅长的知识领域属性设置 */
+.knowledgeAndGrade .knowledg{
+  margin-bottom: 30rpx;
+}
+/* 擅长领域文本颜色设置 */
+.begoodat{
+  color: rgb(221, 135, 84);
+}
+/*答题进阶和属性设置  */
+.knowledgeAndGrade .grade{
+  display: flex;
+  flex-direction: row;
+}
+/*答题进阶和属性设置  */
+.knowledgeAndGrade .grade .pinks{
+  flex: 3;
+}
+/*答题总分设置 */
+.knowledgeAndGrade .grade .sorceNumber{
+  flex: 1;
+  display: flex;
+  color: #dab915;
+  justify-content: flex-end
+}
+/* 答题状元文本属性设置 */
+.pink{
+  color: #ff518c;
+}
+/*  所有的span标签属性设置*/
+span{
+  margin-left: 30rpx;
+}
+/* 答题记录属性设置 */
+.RecordList{
+  display: flex;
+  flex-direction: column;
+}
+/* 答题信息展示 */
+.recourd{
+  height: 120rpx;
+  margin-top: 40rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #cccccc;
+}
+/* 每天答题记录 */
+.recourd .ansTime{
+  margin-bottom: 30rpx;
+}
+/* 答题总数 */
+.recourd .statistics{
+  display: flex;
+  flex-direction: row;
+}
+/* 答题总数属性设置 */
+.recourd .statistics .ansNumber{
+  flex: 1;
+}
+/* 答题总梁设置 */
+.recourd .statistics .sorce{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+/* 答题等级设置 */
+.recourd .statistics .dengj{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+  

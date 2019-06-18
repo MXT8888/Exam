@@ -1,0 +1,167 @@
+/* 头部属性 */
+.head{
+  width: 100%;
+  height: 470rpx;
+  background-color: #66CCCC;
+  display: flex;
+  flex-direction: column;
+}
+/* 头部颜色属性设置 */
+.mainHe{
+  margin: 0rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+/* 头部属性设置 */
+.spans{
+  margin-right: 20rpx;
+}
+/* 用户信息属性设置 */
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 20rpx;
+}
+/*用户头像设置  */
+.userinfo .image{
+  flex: 2;
+}
+/* 用户属性设置 */
+.userinfo .image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+/* 用户昵称属性设置 */
+.userinfo .nameNi{
+  flex: 3;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40rpx;
+}
+/* 名次属性设置 */
+.headtwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx;
+  font-weight: bold;
+}
+/* 名次属性设置 */
+.headtwo .userGrade{
+  margin-bottom: 30rpx;
+}
+/* 分数属性设置 */
+.spans2{
+  margin-left: 14rpx;
+  margin-right: 40rpx;
+}
+/* 答题数量属性设置 */
+.recordNumber{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+/* 答题阿拉伯数量属性设置 */
+.ask{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 升级 */
+.blue{
+  color: #00b26a;
+}
+/* 降级 */
+.red{
+  color: #ed1c24;
+}
+/* 主体属性设置 */
+.body{
+  background-color: #ffffff;
+}
+/* 文字属性设置 */
+.lowerframe{
+  margin: 0rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+/*水平线设置  */
+.xian{
+  border-bottom: 2rpx solid #cccccc;
+}
+/* 擅长领域属性设置 */
+.Knowledgedomain{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+}
+/* 升降级属性设置 */
+.gradeview{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 40rpx;
+  font-size: 28rpx;
+}
+/* 升降级属性设置 */
+.gradeview .rise,.drop{
+  display: flex;
+  flex-direction: row;
+}
+/* 升降级属性设置 */
+.gradeview  image{
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 升降级属性设置 */
+.gradeview .drop{
+  margin-top: 30rpx;
+}
+/* 每天进步一点点文本属性设置 */
+.encourage{
+  font-size: 26rpx;
+  color: #cccccc;
+  margin-top: 10rpx;
+}
+/* 每天答题记录属性设置 */
+.everyDayone {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #cccccc;
+}
+/* 每天答题记录属性设置 */
+.everyDayone .answerNumber{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+/* 每天答题记录属性设置 */
+.everyDayone .answerNumber .answer,.answerok,.answererror,answersroc{
+  flex: 1;
+}
+/* 答题记录字体间的距离 */
+.font-marging{
+  margin-top: 20rpx;
+}
+
+
+
+
+

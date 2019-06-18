@@ -1,0 +1,77 @@
+
+ /* 头部  */
+.head{
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+}
+/* 所有view清楚浮动 */
+view{
+  clear: both; 
+}
+/* 头像属性设置 */
+.userinfo{
+  width: 105rpx;
+  height:105rpx;
+  border-radius:50%;
+  display: flex;
+  margin-left: 30rpx;
+  overflow:hidden;
+  text-align: center;
+  margin-top: 10rpx;
+}
+/* 昵称属性设置 */
+.nickname{
+  margin-left: 20rpx;
+}
+/* 当前等级属性设置 */
+.dqdj{
+   margin-left: 20rpx;
+}
+/*当前等级文本属性设置  */
+.text{
+margin-right: 100rpx;
+display: flex;
+margin-top: 20rpx;
+font-size: 25rpx;
+}
+/* 横线 */
+.xian{
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 中间图片属性设置 */
+.dati{
+  width: 70%;
+  height: 350rpx;
+  display: flex;
+  margin-top: 200rpx;
+  margin-left: 110rpx;
+}
+/* 分数属性设置 */
+.fenshu{
+  color:rgb(218, 121, 42);
+  margin-top: 30rpx;
+  margin-left: 90rpx;
+}
+/* 此处是底部按钮属性设置 */
+.usermotto {
+  margin-top: 90px;
+}
+/* 此处是人脸注册按钮设置 */
+.btn_one{
+  border-radius: 15rpx;
+  width: 200rpx;
+  line-height: 70rpx;
+  background-color: rgb(63, 63, 63);
+}
+/* 此处是人脸注册按钮文字属性设置 */
+.text_one{
+  color: white;
+  margin: 0 auto;
+}
+

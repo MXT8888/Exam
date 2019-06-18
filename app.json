@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/me/me",
+  "pages/UserOperation/Authorization/Authorization",
+    "pages/My/My",
+    "pages/Answer/StartAnswer/StartAnswer",
+    "pages/Answer/Answer",
+    "pages/UserOperation/Register/Register",
+    "pages/Answer/RankingList/RankingList",
+    "pages/Answer/Regulation/Regulation",
+    "pages/UserOperation/Login/Login",
+    "pages/Answer/RankingList/detailed/detailed"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/Answer/Answer",
+        "text": "试题"
+      },
+      {
+        "pagePath": "pages/Answer/RankingList/RankingList",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+/* 定义一个容器 */
+.main{
+  display: flex;
+  flex-direction: column;
+}
+/* 头部属性设置 */
+.head{
+  margin-top: 40rpx;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+/* +10分绿色 */
+.blue{
+  color:#14dec3;
+}
+/* -5分红色显示 */
+.redText{
+  color: #d11a30;
+}
+/* 问题和 */
+.question2{
+  display: flex;
+  flex-direction: row;
+}
+/*  头部和-5分布局方式*/
+.head .wrong{
+ position: relative;
+ left: -100rpx;
+}
+
+/* 总分和单选题文本属性设置 */
+.yellow{
+  color:#ff6c0f;
+}
+/* 加减分动画属性设置 */
+.donghua{
+  position: relative;
+  top: -20rpx;
+}
+.poestion{
+  word-break: break-all;
+  margin: 50rpx 40rpx 0rpx 40rpx;
+  font-size: 35rpx;
+  line-height: 60rpx;
+}
+.poestionaction{
+  word-break: break-all;
+  margin: 10rpx 40rpx 0rpx 40rpx;
+  font-size: 35rpx;
+  line-height: 60rpx;
+}
+/* 选项属性设置 */
+.question2{
+   margin: 30rpx 40rpx 0rpx 50rpx;
+   display: flex;
+   flex-direction: column;
+}
+/* 选项属性设置 */
+.checkbox {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  width: 100%;
+  height: 60rpx;
+  margin: 20rpx;
+}
+/*选项和答案属性设置  */
+.checkbox .conn{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  align-content: center;
+  font-size: 32rpx;
+  color: rgb(107, 107, 107);
+}
+/* 选项ABCD属性值设置 */
+.chaeckboxqu{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  align-content: center;
+  border:  2rpx  solid rgb(128, 128, 128);
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  color: rgb(128, 128, 128);
+}
+/* 选对改变颜色属性为绿色 */
+.chaeckboxquActiveok {
+  background:#00b26a;
+  color: rgb(255, 255, 255);
+  border:  2rpx  solid #fff;
+  pointer-events: none;
+}
+/* 选错改变颜色属性为色 */
+.chaeckboxquActiveerror {
+  background:red;
+  color: rgb(255, 255, 255);
+  border:  2rpx  solid #fff;
+  pointer-events: none;
+}
+/*正确答案属性设置  */
+.qingkuang{
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  }
+/* 下一题按钮属性设置 */
+.register{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120rpx;
+}
+/* 下一题按钮属性设置 */
+.rRegis{
+  width: 400rpx;
+  height: 100rpx;
+  color: #fff;
+  background-color: #838383;
+  border-radius: 50rpx;
+  align-content: center;
+}
+/* 下一题按钮文本属性设置 */
+.rRegis text{
+  position: relative;
+  line-height: 100rpx;
+  align-content: center;
+}
+
+
+
+
+
+

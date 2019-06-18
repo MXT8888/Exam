@@ -1,0 +1,46 @@
+<!-- 头部 -->
+<view class='head'>
+    <view>
+        <!--此处是头像  -->
+        <open-data class="userinfo" type="userAvatarUrl"></open-data>    
+    </view>
+    <view>
+        <!--此处是昵称  -->
+        <open-data class="nickname" type="userNickName" lang="zh_CN"></open-data> 
+        <!-- 当前等级 -->
+        <text class="text" bindtap='guize' ><text class='dqdj' > 当前等级: \t</text>
+            <block wx:if='{{total.current_total_score >= 280 }}'>
+              <text>答题状元</text>�
+            </block>
+              <block wx:elif='{{total.current_total_score >= 210 && total.current_total_score < 279}}'>
+                <text>答题榜眼</text>�
+              </block>
+              <block wx:elif='{{total.current_total_score >= 150 && total.current_total_score < 209}}'>
+                <text>答题探花</text>�
+              </block>
+              <block wx:elif='{{total.current_total_score >= 100 && total.current_total_score < 149}}'>
+                <text>答题举人</text>�
+              </block>
+              <block wx:elif='{{total.current_total_score >= 60 && total.current_total_score < 90}}'>
+                <text>答题秀才</text>�
+              </block>
+              <block wx:elif='{{total.current_total_score >= 30 && total.current_total_score < 50}}'>
+                <text>答题书童</text>�
+              </block>
+              <block wx:else>
+                <text>答题小白</text>�
+              </block>
+      </text> 
+    </view>
+    <!-- 显示分数 -->
+     <view class='fenshu'>{{total.current_total_score}}分</view>
+</view>
+       <text class='xian' >  —————————————————  </text>
+  <!-- 此处是图片显示 -->
+<view>
+    <image src="{{imagess}}" class="dati"></image>
+</view> 
+ <!--此处是底部按钮  -->
+  <view class="usermotto" bindtap="bindViewTap"><!-- 此处是绑定事件-->
+    <button bindtap='startTitle' class="user-motto" class='btn_one' ><text class='text_one'  >{{motto}}</text></button><!-- 此处是按钮和文本-->
+  </view>

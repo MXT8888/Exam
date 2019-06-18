@@ -1,0 +1,144 @@
+<!--定义一个容器  -->
+<view class='main'>
+<!-- 头部 -->
+  <view class='head'>
+    <view class='mainHe'>
+     <!-- 头像+姓名 -->
+      <view class='userinfo'>
+      <!-- 头像 -->
+        <view class='image'>
+          <image src='{{aboutMe.answerRanking.head_portrait}}'></image>
+        </view>
+        <!-- 昵称 -->
+        <view class='nameNi'>
+          <text>{{aboutMe.answerRanking.name}}</text>
+        </view>
+      </view>
+      <!-- 等级+总分+排名 -->
+      <view class='headtwo'>
+        <!--名次  -->
+        <view class='userGrade'>
+          <block wx:if='{{aboutMe.totalCollcetSubject.current_total_score >= 280 }}'>
+          <text>状元</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 210 && aboutMe.totalCollcetSubject.current_total_score < 279}}'>
+            <text>答题状元</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 150 && aboutMe.totalCollcetSubject.current_total_score < 209}}'>
+            <text>答题榜眼</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 100 && aboutMe.totalCollcetSubject.current_total_score < 149}}'>
+            <text>答题探花</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 60 && aboutMe.totalCollcetSubject.current_total_score < 99}}'>
+            <text>答题举人</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 30 && aboutMe.totalCollcetSubject.current_total_score < 59}}'>
+            <text>答题秀才</text>
+          </block>
+          <block wx:elif='{{aboutMe.totalCollcetSubject.current_total_score >= 10 && aboutMe.totalCollcetSubject.current_total_score < 29}}'>
+            <text>答题书童</text>
+          </block>
+          <block wx:else>
+            <text>答题小白</text>
+          </block>
+        </view>
+        <!-- 分数 -->
+        <view >
+            <span class='spans'>{{aboutMe.totalCollcetSubject.current_total_score}}分</span>
+            <span>第{{aboutMe.answerRanking.rownum}}名</span> 
+        </view>
+      </view>
+      <!-- 答题情况 -->
+      <view class='recordNumber'>
+        <!-- 答题总量 -->
+        <view class='numbers ask'>
+          <text>{{aboutMe.totalCollcetSubject.total_number_of_answers}}</text>
+          <text class='font-marging'>答题总量</text>
+        </view>
+        <!--答题正确率  -->
+        <view class='oknumber ask'>
+           <text>{{aboutMe.totalCollcetSubject.correct_number}}</text>
+          <text class='font-marging'>正确</text>
+        </view>
+        <!-- 答题错误率 -->
+        <view class='errornumber ask'>
+           <text>{{aboutMe.totalCollcetSubject.number_of_errors}}</text>
+          <text class='font-marging'>错误</text>
+        </view>
+      </view>
+      <!-- 擅长知识领域 -->
+      <view class='Knowledgedomain'>
+        <text>擅长知识领域：</text>
+          <block wx:for='{{aboutMe.answerRecord}}' wx:key='{{index}}'>
+            <span class='spans'>{{item.knowledge_point}}</span>
+          </block>
+      </view>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='lowerframe'>
+      <!-- 等级 -->
+      <view class='xian'>
+        <view class='gradeview'>
+          <view class='rise'>
+            <view  class='image'>
+              <image src='../../image/rise.png'></image>
+            </view>
+            <view>
+              <span class='spans2 blue'>升级</span>
+              <text>状元</text>
+            </view>
+          </view>
+          <view class='drop'>
+            <view class='image'>
+              <image src='../../image/drop.png'></image>
+            </view>
+            <view>
+              <span class='spans2 red'>升级</span>
+              <text>已经没有级别可以降了</text>
+            </view>
+          </view>
+        </view>
+      </view>  
+      <!-- 答题记录 -->
+      <view class='everyDayanswerlist'>
+        <view class='encourage'>
+          <text>每天进步一点点</text>
+        </view>
+        <block wx:for='{{aboutMe.userDayAnswer}}' wx:key='{{index}}'>
+          <view class='everyDayone'>
+            <view class='answertime'>
+              <text>
+                  <block wx:if='{{item.answerTime === newTime}}'>今天</block>
+                  <block wx:else>{{item.answerTime}}</block>
+              </text>
+            </view>
+            <view class='answerNumber'>
+              <!-- 答题 -->
+              <view class='answer'>
+                <text>答题：</text>
+                <text>{{item.subTotal}}</text>
+              </view>
+              <!-- 答对 -->
+              <view class='answerok'>
+                <text>答对：</text>
+                <text>{{item.correctNumber}}</text>
+              </view>
+              <!-- 答错 -->
+              <view class='answererror'>
+                <text>答错：</text>
+                <text>{{item.errorNUmber}}</text>
+              </view>
+              <!-- 得分 -->
+              <view class='answersroc red'>
+                <text>得分：</text>
+                <text>+{{item.dayScore}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

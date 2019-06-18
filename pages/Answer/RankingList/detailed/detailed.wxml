@@ -1,0 +1,81 @@
+ <!-- 定义一个容器   -->
+<view class='main'>
+  <!-- 头部属性设置  -->
+  <view class='headimg'>
+     <!-- 用户头像设置 -->
+    <view class='image'>
+      <image src='{{aboutMe.answerRanking.head_portrait}}'></image>
+    </view>
+    <!-- 用户昵称属性设置 -->
+    <view class='name'>
+    <text>{{aboutMe.answerRanking.name}}</text>
+    </view>
+  </view>
+  <!-- 知识领域And等级 -->
+  <view class='knowledgeAndGrade'>
+  <!-- 擅长的知识领域属性设置 -->
+    <view class='knowledg'>
+        <text>擅长的知识领域：</text>
+       <block wx:for='{{aboutMe.answerRecord}}' wx:key='{{index}}'>
+            <span>{{item.knowledge_point}}</span>
+        </block>
+    </view>
+  <!-- 答题进阶和属性设置 -->
+    <view class='grade'>
+      <!--答题状元文本设置  -->
+      <view class='pinks'>
+        <text class='pink'>答题状元</text>
+      <span>进阶之路</span>
+      </view>
+      <!-- 答题总分设置 -->
+      <view class='sorceNumber'>
+        <text>{{aboutMe.totalCollcetSubject.current_total_score}}分</text>
+      </view>
+    </view>
+  </view>
+  <!-- 答题记录 -->
+  <view class='RecordList'>
+  <block wx:for='{{aboutMe.userDayAnswer}}' wx:key='{{index}}'>
+    <!-- 答题信息展示 -->
+    <view class='recourd'>
+      <!-- 每天答题记录显示 -->
+      <view class='ansTime'>
+        <block wx:if='{{item.answerTime === newTime}}'>今天</block>
+         <block wx:else>{{item.answerTime}}</block>
+      </view>
+      <!-- 答题总数 -->
+      <view class='statistics'>
+        <view class='ansNumber'>
+          <text>答题：{{item.subTotal}}</text>
+        </view>
+        <view class='sorce'>
+          <text>累计得分：{{item.dayScore}}</text>
+        </view>
+        <view class='dengj pink'>
+            <block wx:if='{{item.dayScore >= 280 }}'>
+            <text>答题状元</text>
+            </block>
+            <block wx:elif='{{item.dayScore >= 210 && item.dayScore < 279}}'>
+              <text>答题榜眼</text>
+            </block>
+            <block wx:elif='{{item.dayScore >= 150 && item.dayScore < 209}}'>
+              <text>答题探花</text>
+            </block>
+            <block wx:elif='{{item.dayScore >= 100 && item.dayScore < 149}}'>
+              <text>答题举人</text>
+            </block>
+            <block wx:elif='{{item.dayScore >= 60 && item.dayScore < 99}}'>
+              <text>答题秀才</text>
+            </block>
+            <block wx:elif='{{item.dayScore >= 30 && item.dayScore < 59}}'>
+              <text>答题书童</text>
+            </block>
+            <block wx:else>
+              <text>答题小白</text>
+            </block>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/rankingList/rankingList.wxml-->
+<view class='main'>
+  <!-- 排名头部 -->
+  <view class='head'>
+    <view class='head50'>《金榜题名》（前50）</view>
+    <view class='share'><button open-type='share' plain='{{true}}' class='shareButton'><text>分享</text></button></view>
+  </view>
+  <!-- 排名列表 -->
+  <view class='rankingList'>
+    <block wx:for='{{answerRanking}}' wx:key='{{index}}'>
+      <!-- 点击每一个用户进行详细信息查看 -->
+      <navigator url='detailed/detailed?id={{item.id}}' open-type='navigate'>
+        <view class='oneList'>
+          <view class='rankingNumber'>{{item.rownum}}</view>
+          <!-- 头像 -->
+          <view class='headimg duiq'>
+            <image src='{{item.head_portrait}}'></image>
+          </view>
+          <view class='information duiq'>
+            <!-- 昵称 -->
+            <view class='username'>{{item.name}}</view>
+            <view>
+              <view class='userposition'>
+                <!--城市  -->
+                <image src='../../images/position.png' class='position'></image>
+                <text decode="{{true}}">&nbsp;{{item.city}}</text>
+              </view>
+            </view>
+          </view>
+          <!-- 其它 -->
+          <view class='grade duiq'>
+              <block wx:if='{{item.current_total_score >= 280 }}'>
+                <text>答题状元</text>
+              </block>
+              <block wx:elif='{{item.current_total_score >= 210 && item.current_total_score < 279}}'>
+                <text>答题榜样</text>
+              </block>
+              <block wx:elif='{{item.current_total_score >= 150 && item.current_total_score < 209}}'>
+                <text>答题探花</text>
+              </block>
+              <block wx:elif='{{item.current_total_score >= 100 && item.current_total_score < 149}}'>
+                <text>答题举人</text>
+              </block>
+              <block wx:elif='{{item.current_total_score >= 60 && item.current_total_score < 99}}'>
+                <text>答题秀才</text>
+              </block>
+              <block wx:elif='{{item.current_total_score >= 30 && item.current_total_score < 59}}'>
+                <text>答题书童</text>
+              </block>
+              <block wx:else>
+                <text>答题小白</text>
+              </block>
+          </view>
+          <!-- 总分数 -->
+          <view class='sorceNumber'>{{item.current_total_score}}分</view>
+        </view>
+    </navigator>
+    </block>
+  </view>
+</view>

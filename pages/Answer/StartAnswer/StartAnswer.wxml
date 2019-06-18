@@ -1,0 +1,69 @@
+<!-- 定义一个容器 -->
+<view class='main'>
+   <!-- 得分减分数提示 -->
+   <view class='head'>
+      <!-- 答对 -->
+      <view>答对:<text class='blue'>+10分</text></view>
+      <!-- 答错 -->
+      <view class='wrong'>答错:<text class='redText'>-5分</text></view>
+        <view>
+          <!-- 分数汇总对象 -->
+          <text class='yellow'>{{score}}分</text>
+          <!-- 加分减分动画效果 -->
+          <block wx:if='{{answernumber===0}}'></block>
+          <block wx:else>
+            <block wx:if='{{trueOrFlase}}'>
+              <!-- 正确+10分 -->
+              <view class='donghua' animation="{{animationData}}" style="color:#14dec3;">+10</view>
+            </block>
+            <block wx:else>
+              <!-- 错误-5分 -->            
+              <view class='donghua' animation="{{animationData}}" style="color:#d11a30;" >-5</view>
+            </block>
+          </block>
+        </view>
+   </view>
+    <!-- 试题 -->
+   <view class='{{answernumber == 0 ? "poestion" : "poestionaction"}}' >
+        <text class='yellow'>【单选题】</text>
+        <!--题号和题目  -->
+        <text>{{question.id}}.{{question.content}}</text>
+        <!-- 题目类型 -->
+        <text class='blue' style='font-size:25rpx;'>({{question.knowledge_AREA}})</text>
+    </view>
+    <!-- ABCD选项样式 -->
+    <view class='question2'>
+      <!-- questionPotion用数组进行选项的存储 -->
+      <view wx:for='{{questionPotion}}' wx:key='{{index}}'
+        bindtap='{{answernumber===0?"getradio":""}}' data-id='{{index}}'><!--answernumber：答题次数 。getradio选项卡点击方法 。通过当前的id来循环index-->
+        <view class='checkbox'>
+          <!--答题状况----item.option循环选项  -->
+          <block wx:if='{{trueOrFlase}}'>   <!--答题状况默认为false  -->
+            <!-- 正确答案显示绿色 -->
+            <text class='chaeckboxqu  {{ item.checked? "chaeckboxquActiveok" : ""}}' >{{item.option}}</text>
+          </block>
+          <block wx:else>
+            <!-- 错误答案显示红色 -->
+            <!--圈圈的ABCD  -->
+            <text class='chaeckboxqu  {{ item.checked? "chaeckboxquActiveerror" : ""}}' >{{item.option}}</text>
+          </block>
+          <!--题目文本  -->
+          <text decode="{{true}}" class='conn'>&nbsp;&nbsp;&nbsp;{{item.option_CONTENT}}</text>
+        </view>
+      </view>
+      <!-- 答案的显示 -->
+      <view class='qingkuang'>
+        <block wx:if='{{answernumber != 0}}'>
+          正确答案：{{answer}}
+        </block>
+      </view>
+      <!-- 下一题按钮 -->
+      <view class='register'>
+       <block wx:if='{{answernumber != 0}}'>
+          <button class='rRegis' bindtap='startanswering'>
+          <text bindtap='startanswering'>下一题</text>
+          </button>
+        </block>
+      </view>
+    </view>
+</view>
