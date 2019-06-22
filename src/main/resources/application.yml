@@ -1,0 +1,32 @@
+sys:
+  version: 0.2
+  
+logging.level.cn.xiaoandx: DEBUG
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yiqikaozhuangyuan?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=UTC
+    username: root
+    password: root
+    hikari:
+      auto-commit: false
+      minimum-idle: 2
+      maximum-pool-size: 10
+      connection-timeout: 10000
+      max-lifetime: 600000
+      idle-timeout: 60000
+      validation-timeout: 1000
+      leak-detection-threshold: 30000
+
+
+server:
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: C:/log/hello/yml
+      pattern: '%h %l %u [%{yyyy-MM-dd HH:mm:ss.SSS}t] "%r" %s %b %D'
+      prefix: hello_access
+      suffix: .log
+    basedir: C:/log/hello/tomcat
