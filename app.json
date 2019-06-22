@@ -1,7 +1,6 @@
 {
   "pages": [
-    "pages/me/me",
-  "pages/UserOperation/Authorization/Authorization",
+"pages/UserOperation/Authorization/Authorization",
     "pages/My/My",
     "pages/Answer/StartAnswer/StartAnswer",
     "pages/Answer/Answer",
