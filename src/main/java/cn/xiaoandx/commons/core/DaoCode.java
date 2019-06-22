@@ -17,9 +17,6 @@ package cn.xiaoandx.commons.core;
 
 /**  
  * <p>插入数据状态码</p> 
-
-
-
  * @ClassName:AddCode   
  * @author: Fuqiang.Wu 
  * @since: V0.1 
